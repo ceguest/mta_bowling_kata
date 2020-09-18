@@ -1,10 +1,12 @@
 
 class Bowling
     def score(string)
-      if string == "00 00 00 00 00 00 00 00 00 00"
-          0
-      else 
-        20
-      end
+        total = 0
+        total_score = string.gsub(" ", "")
+        total_score.split('').each do |s|
+            total += s.to_i
+        end
+        total 
     end
+
 end
